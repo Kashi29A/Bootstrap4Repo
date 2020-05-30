@@ -8,11 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
-    <link rel="stylesheet" href="css/styles.css">
+     <!-- build:css css/main.css -->
+     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+     <link href="css/styles.css" rel="stylesheet">
+     <!-- endbuild -->
     <title>Ristorante Con Fusion</title>
 </head>
 
@@ -36,7 +37,7 @@
 
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="buttonLogin" type="button" role="button">
                         <span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>
@@ -83,7 +84,7 @@
         </div>
     </div>
 
-    <div id="reservetablemodal" class="modal fade" role="dialog">
+    <div id="reservationFormModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
             <div class="modal-content">
@@ -170,14 +171,18 @@
                 <div class="col-12 col-sm-3 align-self-center">
                     <img src="img/logo.png" class="img-fluid" alt="logo" srcset="">
                 </div>
-                <div class="col-12 col-sm-3 align-self-center">
-                    <!-- <button class="btn btn-sm btn-warning" data-target="reservetable">Reserve Table</button> -->
-                    <!-- <a href="#reservetable" class="btn btn-sm btn-block btn-warning" data-toggle="tooltip"
+                <!-- <div class="col-12 col-sm-3 align-self-center"> -->
+                <!-- <button class="btn btn-sm btn-warning" data-target="reservetable">Reserve Table</button> -->
+                <!-- <a href="#reservetable" class="btn btn-sm btn-block btn-warning" data-toggle="tooltip"
                         data-html="true" title="or call us at <br> <strong> +91 9399352078</strong>"
                         data-placement="bottom">Reserve Table</a> -->
-                    <a data-toggle="modal" class="btn btn-sm btn-block btn-warning" data-target="#reservetablemodal">
+                <!-- <a data-toggle="modal" class="btn btn-sm btn-block btn-warning" data-target="#reservetablemodal">
                         Reserve Table</a>
 
+                </div> -->
+                <div class="col-12 col-sm align-self-center" style="text-align: center;">
+                    <a id="buttonReservation" type="button" class="btn btn-warning btn-sm btn-block"
+                        role="button">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -315,7 +320,7 @@
             </div>
         </div>
     </div>
-    < <div id="reservetable" class="row row-content  col-12 col-sm-8 offset-sm-2 justify-content-center">
+    <!-- <div id="reservetable" class="row row-content  col-12 col-sm-8 offset-sm-2 justify-content-center">
         <div class="card">
             <h3 class="card-header bg-warning text-white">Reserve a table</h3>
             <div class="card-body">
@@ -330,8 +335,8 @@
 
                     </dd>
                     <dt class="col-sm-6">Date and Time</dt>
-                    <!-- <dd class="col-3"><input type="date" data-provide="datepicker" class="datepicker form-control" placeholder="Date of reservation" name="reservedate" id="reservedate"></dd>
-                    <dd class="col-3"><input type="time"  class="form-control" name="" id=""></dd> -->
+                     <dd class="col-3"><input type="date" data-provide="datepicker" class="datepicker form-control" placeholder="Date of reservation" name="reservedate" id="reservedate"></dd>
+                    <dd class="col-3"><input type="time"  class="form-control" name="" id=""></dd> 
                     <dd class="col-12 col-sm-3"><input type="text" class="form-control" name="date" id="date"
                             placeholder="Date"></dd>
                     <dd class="col-12 col-sm-3"><input type="text" class="form-control" name="time" id="time"
@@ -341,93 +346,63 @@
                 </dl>
             </div>
         </div>
-        </div>
+        </div> -->
 
 
 
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-4 offset-1 col-sm-2">
-                        <h5>Links</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="./aboutus.html">About</a></li>
-                            <li><a href="#">Menu</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-7 col-sm-5">
-                        <h5>Our Address</h5>
-                        <address>
-                            121, Clear Water Bay Road<br>
-                            Clear Water Bay, Kowloon<br>
-                            HONG KONG<br>
-                            <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
-                            <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
-                            <i class="fa fa-envelope fa-lg"></i>: <a
-                                href="mailto:confusion@food.net">confusion@food.net</a>
-                        </address>
-                    </div>
-                    <div class="col-12 col-sm-4 align-self-center">
-                        <div class="text-center">
-                            <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i
-                                    class="fa fa-google-plus fa-lg"></i></a>
-                            <a class="btn btn-social-icon btn-facebook"
-                                href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
-                            <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i
-                                    class="fa fa-linkedin fa-lg"></i></a>
-                            <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i
-                                    class="fa fa-twitter fa-lg"></i></a>
-                            <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i
-                                    class="fa fa-youtube fa-lg"></i></a>
-                            <a class="btn btn-social-icon " href="mailto:"><i class="fa fa-envelope fa-lg"></i></a>
-                        </div>
-                    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 offset-1 col-sm-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="./aboutus.html">About</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-auto">
-                        <p>© Copyright 2018 Ristorante Con Fusion</p>
+                <div class="col-7 col-sm-5">
+                    <h5>Our Address</h5>
+                    <address>
+                        121, Clear Water Bay Road<br>
+                        Clear Water Bay, Kowloon<br>
+                        HONG KONG<br>
+                        <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
+                        <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
+                        <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:confusion@food.net">confusion@food.net</a>
+                    </address>
+                </div>
+                <div class="col-12 col-sm-4 align-self-center">
+                    <div class="text-center">
+                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i
+                                class="fa fa-google-plus fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i
+                                class="fa fa-facebook fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i
+                                class="fa fa-linkedin fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i
+                                class="fa fa-twitter fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-github" href="https://github.com/Kashi29A/Bootstrap4Repo"><i
+                                class="fa fa-github fa-lg"></i></a>
+                        <a class="btn btn-social-icon " href="mailto:"><i class="fa fa-envelope fa-lg"></i></a>
                     </div>
                 </div>
             </div>
-        </footer>
-        <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
-        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                $('[data-toggle="tooltip"]').tooltip();
-            });
-
-            $(document).button('toggle')
-        </script>
-
-        <script>
-            $(document).ready(function () {
-                $("#mycarousel").carousel({ interval: 1000 });
-                // $("#carousel-pause").click(function () {
-                //     $("#mycarousel").carousel('pause');
-                // });
-                // $("#carousel-play").click(function () {
-                //     $("#mycarousel").carousel('cycle');
-                // });
-
-                $("#carouselButton").click(function(){
-                if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-                    $("#mycarousel").carousel('pause');
-                    $("#carouselButton").children("span").removeClass('fa-pause');
-                    $("#carouselButton").children("span").addClass('fa-play');
-                }
-                else if ($("#carouselButton").children("span").hasClass('fa-play')){
-                    $("#mycarousel").carousel('cycle');
-                    $("#carouselButton").children("span").removeClass('fa-play');
-                    $("#carouselButton").children("span").addClass('fa-pause');                    
-                }
-            });
-            });
-        </script>
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <p>© Copyright 2018 Ristorante Con Fusion</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+      <!-- build:js js/main.js -->
+      <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+      <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+      <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="js/scripts.js"></script>
+      <!-- endbuild -->
 </body>
 
 </html>
